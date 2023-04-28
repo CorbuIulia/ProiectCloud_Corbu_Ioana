@@ -2,9 +2,11 @@
 export default function InsertPage() {
 	const insertRecord = (event) => {
 		event.preventDefault();
-		const title = document.getElementById("title").value;
-		const description = document.getElementById("description").value;
-		const data = {title, description};
+		const titlu = document.getElementById("titlu").value;
+		const descriere = document.getElementById("descriere").value;
+		const gen = document.getElementById("gen").value;
+		const durata = document.getElementById("durata").value;
+		const data = {titlu, descriere,gen,durata};
 		fetch("/api/records", {
 			method: "POST",
 			headers: {
@@ -13,35 +15,52 @@ export default function InsertPage() {
 			body: JSON.stringify(data),
 		}).then(() => {
 			console.log("New record inserted");
-			document.getElementById("title").value = "";
-			document.getElementById("description").value = "";
+			document.getElementById("titlu").value = "";
+			document.getElementById("descriere").value = "";
+			document.getElementById("gen").value = "";
+			document.getElementById("durata").value = "";
 		});
 	}
 
 	return (
-		<section className="bg-white dark:bg-gray-900">
+		<section className="bg-violet-200">
 			<div className="container px-6 py-10 mx-auto">
-				<h1 className="w-[500px] mx-auto text-center text-6xl">Fun facts app</h1>
-				<p className="w-[1000px] mx-auto text-center mt-4 text-3xl">This is an app that showcases fun facts</p>
+				<h1 className="w-[1000px] mx-auto text-center text-violet-900 font-bold text-5xl">Aplicatie pentru gestionarea filmelor</h1>
+				<p className="text-center font-bold text-violet-900 mt-4 text-3xl">Adaugati un film nou</p>
 
-				<form>
-					<div className="mb-6">
-						<label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fact title</label>
-						<input type="text" id="title"
-						       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       placeholder="name@flowbite.com" required/>
+				<form >
+				
+					<div className=" mb-6">
+						<label htmlFor="titlu" className="block mb-2 text-lg font-medium text-violet-900 underline dark:text-white">Denumire:</label>
+						<input type="text" id="titlu"
+						       className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						       placeholder="Scrieti denumirea filmului..." required/>
+					</div>
+					<div className=" mb-6">
+						<label htmlFor="descriere"
+						       className="block mb-2 text-lg font-medium text-violet-900 underline dark:text-white">Descriere:</label>
+						<textarea type="text" id="descriere"
+						       className="bg-gray-50 border border-gray-300 text-gray-900  text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						       placeholder="Adaugati o descriere..." required/>
 					</div>
 					<div className="mb-6">
-						<label htmlFor="description"
-						       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fact description</label>
-						<textarea id="description"
-						       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       required/>
+						<label htmlFor="gen" className="block mb-2 text-lg font-medium text-violet-900 underline dark:text-white">Gen:</label>
+						<input type="text" id="gen"
+						       className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						       placeholder="Scrieti genul/genurile filmului separate prin , (Ex:Actiune, Drama) " required/>
 					</div>
+					<div className=" mb-6">
+						<label htmlFor="durata" className="block mb-2 text-lg font-medium text-violet-900 underline dark:text-white">Durata:</label>
+						<input type="text" id="durata"
+						       className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						       placeholder="Introduceti durata in minute (Ex:120)" required/>
+					</div>
+					<div className="flex flex-col items-center justify-center ">
 					<button type="submit"
 					        onClick={ insertRecord }
-					        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit
+					        className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-3xl px-6 py-3 text-center mr-2 mb-2">Adauga
 					</button>
+					</div>
 				</form>
 			</div>
 		</section>

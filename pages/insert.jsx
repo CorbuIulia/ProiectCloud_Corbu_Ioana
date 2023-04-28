@@ -1,4 +1,4 @@
-// pages/insert.js
+// pages/insert.jsx
 import InsertPage from "@/js/components/InsertPage";
 
 export default function Insert() {
