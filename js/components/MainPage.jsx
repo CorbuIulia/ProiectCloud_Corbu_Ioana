@@ -1,7 +1,7 @@
 
 
 import {useEffect, useState} from "react";
-
+import Link from "next/link";
 export default function MainPage() {
 	const [records, setRecords] = useState([]);
 
@@ -35,12 +35,19 @@ export default function MainPage() {
 		}
 	}
 
+	
+
 	return (
 		<section className="bg-violet-200 ">
 			<div className="container px-6 py-10 mx-auto">
 				<h1 className="w-[1000px] mx-auto text-center text-violet-900 font-bold text-5xl">Aplicatie pentru gestionarea filmelor</h1>
-				<p className="w-[1000px] mx-auto text-center text-violet-900 mt-4 text-3xl">Aceasta aplicatie prezinta detalii despre filme</p>
-
+				<p className="w-[1000px] mx-auto text-center text-violet-900 mt-4 text-3xl mb-10">Aceasta aplicatie prezinta detalii despre filme</p>
+				<Link href={`/insert`}>
+				<button type="button"
+					className="text-white bg-gradient-to-r from-violet-400 via-violet-500 to-violet-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-white-300 dark:focus:ring-white-800 shadow-lg shadow-violet-500/50 dark:shadow-lg dark:shadow-violet-800/90 font-medium rounded-lg text-sm px-6 py-3 text-xl mr-2 ">
+				+ Adauga film
+				</button>
+				</Link>
 				<div className=" grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3">
 					{records.map(record => (
 						<div
@@ -69,6 +76,7 @@ export default function MainPage() {
 						</div>
 					))}
 				</div>
+				
 			</div>
 		</section>
 	)
