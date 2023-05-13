@@ -1,3 +1,5 @@
+import Link  from "next/link";
+
 // js/components/InsertPage.jsx
 export default function InsertPage() {
 	const insertRecord = (event) => {
@@ -58,9 +60,16 @@ export default function InsertPage() {
 					<div className="flex flex-col items-center justify-center ">
 					<button type="submit"
 					        onClick={ insertRecord }
-					        className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-3xl px-6 py-3 text-center mr-2 mb-2">Adauga
+					        className="text-white bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 hover:bg-gradient-to-br focus:ring-4 shadow-lg shadow-violet-500/50 dark:shadow-lg dark:shadow-violet-800/90focus:outline-none focus:ring-violet-300 dark:focus:ring-violet-800 font-medium rounded-lg text-3xl px-6 py-3 text-center mr-2 "> + Adauga
 					</button>
+					
 					</div>
+					<Link href={`/`}>
+					<button 
+					        className="text-white bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 hover:bg-gradient-to-br focus:ring-4 shadow-lg shadow-violet-500/50 dark:shadow-lg dark:shadow-violet-800/90 focus:outline-none focus:ring-violet-300 dark:focus:ring-violet-800 font-medium rounded-lg text-3xl px-6 py-3 text-center mr-2 mb-2">
+							Inapoi
+					</button>
+					</Link>
 				</form>
 			</div>
 		</section>
