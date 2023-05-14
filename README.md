@@ -1,21 +1,9 @@
-
-Cuprins
-
-Descriere problemă	4
-Descriere tehnologii	5
-MongoDb	5
-Vercel	5
-Next.js	6
-Tailwind CSS	6
-GitHub	7
-Descriere API	8
-Flux de date	11
-Capturi de ecran aplicație	17
-Referințe	19
-
+CORBU IOANA IULIA, GRUPA 1119, SIMPRE
 
 Link Youtube: https://youtu.be/RZw70NJZLmU
+
 Link Vercel: https://proiect-cloud-corbu-ioana.vercel.app/
+
 Link GitHub: https://github.com/CorbuIulia/ProiectCloud_Corbu_Ioana.git
 
 
