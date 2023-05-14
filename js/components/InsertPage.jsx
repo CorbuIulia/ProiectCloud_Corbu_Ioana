@@ -27,7 +27,7 @@ export default function InsertPage() {
 	return (
 		<section className="bg-violet-200">
 			<div className="container px-6 py-10 mx-auto">
-				<h1 className="w-[1000px] mx-auto text-center text-violet-900 font-bold text-5xl">Aplicatie pentru gestionarea filmelor</h1>
+				<h1 className="w-[1000px] mx-auto text-center text-violet-900 font-bold text-5xl">MoviesWallet</h1>
 				<p className="text-center font-bold text-violet-900 mt-4 text-3xl">Adaugati un film nou</p>
 
 				<form >
