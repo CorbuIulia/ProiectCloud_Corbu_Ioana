@@ -8,6 +8,7 @@ Link GitHub: https://github.com/CorbuIulia/ProiectCloud_Corbu_Ioana.git
 
 
 
+
 Introducere
 
 Cloud computing este un concept modern în domeniul computerelor și informaticii, reprezentând un ansamblu distribuit de servicii de calcul, aplicații, acces la informații și stocare de date, fără ca utilizatorul să aibă nevoie să cunoască amplasarea și configurația fizică a sistemelor care furnizează aceste servicii. Acest concept a apărut in practică prin anii 2006-2007.
